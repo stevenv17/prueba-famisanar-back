@@ -31,7 +31,7 @@ public interface ProductoRepository extends JpaRepository<ProductoEntity, Intege
       JOIN producto p ON p.id = v.producto_id
       GROUP BY v.producto_id, p.nombre
       ORDER BY total_vendida DESC
-      LIMIT 1;
+      LIMIT 1
       """, nativeQuery = true)
   List<Object[]> obtenerProductoMasVendido();
 
@@ -41,8 +41,16 @@ public interface ProductoRepository extends JpaRepository<ProductoEntity, Intege
       JOIN producto p ON p.id = v.producto_id
       GROUP BY v.producto_id, p.nombre
       ORDER BY total_vendida ASC
-      LIMIT 1;
+      LIMIT 1
       """, nativeQuery = true)
   List<Object[]> obtenerProductoMenosVendido();
+
+
+  @Query(value = """
+      SELECT SUM(total)
+      FROM venta v
+      """, nativeQuery = true)
+  List<Object[]> obtenerIngresoTotalVentas();
+
 
 }

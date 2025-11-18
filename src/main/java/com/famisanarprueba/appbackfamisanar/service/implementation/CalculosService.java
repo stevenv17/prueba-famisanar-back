@@ -22,12 +22,14 @@ public class CalculosService implements ICalculosService {
 
     List<Object[]> masVendido = productoRepository.obtenerProductoMasVendido();
     List<Object[]> menosVendido = productoRepository.obtenerProductoMenosVendido();
+    List<Object[]> ingresoTotalVentas = productoRepository.obtenerIngresoTotalVentas();
     String masVendidoProducto = (!masVendido.isEmpty() && masVendido.get(0)[0] != null) ? masVendido.get(0)[0].toString() : null;
     String menosVendidoProducto = (!menosVendido.isEmpty() && menosVendido.get(0)[0] != null) ? menosVendido.get(0)[0].toString() : null;
+    Long ingresoTotal = (!ingresoTotalVentas.isEmpty() && ingresoTotalVentas.get(0)[0] != null) ? ((Number) ingresoTotalVentas.get(0)[0]).longValue() : 0L;
 
 
     CalculosDtoOut calculosDtoOut = new CalculosDtoOut();
-    calculosDtoOut.setIngresos(0L);
+    calculosDtoOut.setIngresos(ingresoTotal);
     calculosDtoOut.setPromedio(0L);
     calculosDtoOut.setProductoMasVendido(masVendidoProducto);
     calculosDtoOut.setProductoMenosVendido(menosVendidoProducto);
