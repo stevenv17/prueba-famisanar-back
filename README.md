@@ -53,3 +53,30 @@ CREATE TABLE venta (
 ) ENGINE=InnoDB;
 
 ```
+
+# Endpoints:
+
+- http://localhost:8093/producto/lista (GET)
+
+- http://localhost:8093/producto/{id} (GET) -> http://localhost:8093/producto/1
+
+- http://localhost:8093/venta/vender-producto (POST)
+
+```json
+{
+"productoId": 1,
+"cantidad": 11
+}
+```
+
+- http://localhost:8093/pedido/nuevo-pedido (POST)
+
+```json
+{
+"productoId": 1,
+"cantidad": 11
+}
+```
+
+
+
