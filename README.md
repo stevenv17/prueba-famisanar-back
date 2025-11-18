@@ -87,3 +87,20 @@ CREATE TABLE venta (
 # Frontend
 
 ![imagen](./imagenes_readme/frontend.png)
+
+
+
+# Correr app Spring Boot:
+`./mvnw spring-boot:run  (desde la raiz del proyecto)`
+
+
+# Correr app Angular:
+
+- Requisitos:
+
+1. Node.js 22.0.0
+2. Angular/CLI@19
+
+- Instalar dependencias (desde la raiz del proyecto): `npm install`
+
+- ejecutar app: `ng serve` o `ng serve --port 4200`
