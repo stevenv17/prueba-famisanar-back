@@ -78,5 +78,7 @@ CREATE TABLE venta (
 }
 ```
 
+- http://localhost:8093/calculos/obtener-estadisticas (GET)
+
 
 
