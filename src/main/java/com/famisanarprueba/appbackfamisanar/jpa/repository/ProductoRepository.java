@@ -47,10 +47,16 @@ public interface ProductoRepository extends JpaRepository<ProductoEntity, Intege
 
 
   @Query(value = """
-      SELECT SUM(total)
+      SELECT SUM(v.total)
       FROM venta v
       """, nativeQuery = true)
   List<Object[]> obtenerIngresoTotalVentas();
+
+  @Query(value = """
+      SELECT SUM(v.cantidad_vendida)
+      FROM venta v
+      """, nativeQuery = true)
+  List<Object[]> obtenerCantidadVendidos();
 
 
 }
