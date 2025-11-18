@@ -1,5 +1,7 @@
 # Modelo DB
 
+Se uso una base de datos MySQL que está en AWS y puede ser consultada (ver application.yaml).
+
 ![imagen](./imagenes_readme/modelo_db.png)
 
 ```sql
@@ -82,3 +84,6 @@ CREATE TABLE venta (
 
 
 
+# Frontend
+
+![imagen](./imagenes_readme/frontend.png)
