@@ -21,7 +21,7 @@ public class CalculosService implements ICalculosService {
   public CalculosDtoOut obtenerEstadisticas() {
 
     List<Object[]> masVendido = productoRepository.obtenerProductoMasVendido();
-    List<Object[]> menosVendido = productoRepository.obtenerProductoMasVendido();
+    List<Object[]> menosVendido = productoRepository.obtenerProductoMenosVendido();
     String masVendidoProducto = (!masVendido.isEmpty() && masVendido.get(0)[0] != null) ? masVendido.get(0)[0].toString() : null;
     String menosVendidoProducto = (!menosVendido.isEmpty() && menosVendido.get(0)[0] != null) ? menosVendido.get(0)[0].toString() : null;
 
