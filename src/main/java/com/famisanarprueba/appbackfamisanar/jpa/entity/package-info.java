@@ -1,0 +1,1 @@
+package com.famisanarprueba.appbackfamisanar.jpa.entity;

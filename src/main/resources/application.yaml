@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: App-Back-Famisanar
+  profiles:
+    active: dev
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://database-mysql-1.clyw6ukua96e.us-east-2.rds.amazonaws.com:3306/pruebadb}
+    username: ${SPRING_DATASOURCE_USERNAME:my_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:Passwd123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+
+server:
+  port: 8093
