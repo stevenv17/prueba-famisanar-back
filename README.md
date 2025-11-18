@@ -1,5 +1,6 @@
 # Modelo DB
 
+![imagen](./imagenes_readme/modelo_db.png)
 
 ```sql
 
